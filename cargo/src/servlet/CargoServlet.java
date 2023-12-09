@@ -1,12 +1,14 @@
 package servlet;
 
 
+import entity.Cargo;
 import entity.Staff;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.impl.CargoServiceImpl;
 import service.impl.StaffServiceImpl;
 
 import java.io.IOException;
@@ -27,17 +29,41 @@ public class CargoServlet extends HttpServlet {
 
         switch (flag) {
             case "cargo_add" -> {
+                Cargo cargo = new Cargo();
+                cargo.setCargoName(req.getParameter("cargo_name"));
+                cargo.setCargoPrice(Double.valueOf(req.getParameter("cargo_price")));
+                cargo.setCargoTypeID(Integer.valueOf(req.getParameter("cargo_type")));
+                cargo.setWarehouseID(Integer.valueOf(req.getParameter("cargo_warehouseID")));
+                cargo.setCargoRemark(req.getParameter("cargo_description"));
 
+                new CargoServiceImpl().insertCargo(cargo);
 
+                resp.sendRedirect("workspace.jsp");
             }
             case "cargo_edit_pre" -> {
                 String cargoId = req.getParameter("cargo_id"); // 获取
+                Cargo cargo = new CargoServiceImpl().selectCargo(Integer.valueOf(cargoId));
+
+                req.setAttribute("old_cargo", cargo);
+                req.getRequestDispatcher("cargo_edit.jsp").forward(req, resp);
             }
             case "cargo_edit" -> {
+                Cargo cargo = new Cargo();
 
+                cargo.setCargoID(Integer.valueOf(req.getParameter("cargo_id")));
+                cargo.setCargoName(req.getParameter("cargo_name"));
+                cargo.setCargoPrice(Double.valueOf(req.getParameter("cargo_price")));
+                cargo.setCargoTypeID(Integer.valueOf(req.getParameter("cargo_type")));
+                cargo.setWarehouseID(Integer.valueOf(req.getParameter("cargo_warehouseID")));
+                cargo.setCargoRemark(req.getParameter("cargo_description"));
+
+                new CargoServiceImpl().updateCargo(cargo);
+
+                resp.sendRedirect("workspace.jsp");
             }
             case "cargo_delete" -> {
-
+                new CargoServiceImpl().deleteCargo(Integer.valueOf(req.getParameter("delete_cargo_id")));
+                resp.sendRedirect("workspace.jsp");
             }
         }
     }

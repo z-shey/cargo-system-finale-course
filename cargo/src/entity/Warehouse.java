@@ -3,7 +3,7 @@ package entity;
 public class Warehouse {
     private Integer WarehouseID;
     private String WarehouseName;
-    private String WarehouseType;
+    private Integer WarehouseType;
     private Integer DistrictID;
     private String WarehouseLocation;
     private Integer StaffNumber;
@@ -13,7 +13,7 @@ public class Warehouse {
     public Warehouse() {
     }
 
-    public Warehouse(Integer warehouseID, String warehouseName, String warehouseType, Integer districtID, String warehouseLocation, Integer staffNumber, Integer cargoNumber, String warehouseRemark) {
+    public Warehouse(Integer warehouseID, String warehouseName, Integer warehouseType, Integer districtID, String warehouseLocation, Integer staffNumber, Integer cargoNumber, String warehouseRemark) {
         WarehouseID = warehouseID;
         WarehouseName = warehouseName;
         WarehouseType = warehouseType;
@@ -40,11 +40,11 @@ public class Warehouse {
         WarehouseName = warehouseName;
     }
 
-    public String getWarehouseType() {
+    public Integer getWarehouseType() {
         return WarehouseType;
     }
 
-    public void setWarehouseType(String warehouseType) {
+    public void setWarehouseType(Integer warehouseType) {
         WarehouseType = warehouseType;
     }
 

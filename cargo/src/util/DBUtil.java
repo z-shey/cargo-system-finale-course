@@ -30,7 +30,7 @@ public class DBUtil {
     // 创建连接池
     private static DataSource createDataSource() {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/cargodb");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/e_cargo");
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
         config.setUsername("root");
         config.setPassword("Root123");

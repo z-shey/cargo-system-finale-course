@@ -36,7 +36,7 @@ public class WarehouseDaoImpl implements WarehouseDao {
 
     @Override
     public void insert(Warehouse warehouse) {
-        String sql = "INSERT INTO staff VALUES(DEFAULT,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO warehouse VALUES(DEFAULT,?,?,?,?,?,?,?)";
         try (Connection connection = DBUtil.getConnection()) {
             queryRunner.update(connection, sql,
                     warehouse.getWarehouseName(),
@@ -54,16 +54,15 @@ public class WarehouseDaoImpl implements WarehouseDao {
 
     @Override
     public void update(Warehouse warehouse) {
-        String sql = "UPDATE warehouse SET WarehouseName=?, WarehouseType=?, DistrictID=?, WarehouseLocation=? , StaffNumber=? , CargoNumber=?, WarehouseRemark=? WHERE WarehouseID=?";
+        String sql = "UPDATE warehouse SET WarehouseName=?, WarehouseType=?, DistrictID=?, WarehouseLocation=? , WarehouseRemark=? WHERE WarehouseID=?";
         try (Connection connection = DBUtil.getConnection()) {
             queryRunner.update(connection, sql,
                     warehouse.getWarehouseName(),
                     warehouse.getWarehouseType(),
-                    warehouse.getWarehouseID(),
+                    warehouse.getDistrictID(),
                     warehouse.getWarehouseLocation(),
-                    warehouse.getStaffNumber(),
-                    warehouse.getCargoNumber(),
-                    warehouse.getWarehouseRemark()
+                    warehouse.getWarehouseRemark(),
+                    warehouse.getWarehouseID()
             );
         } catch (SQLException e) {
             throw new RuntimeException(e);

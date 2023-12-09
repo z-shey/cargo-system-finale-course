@@ -31,6 +31,13 @@ public class MainServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
+        // 注册
+        Boolean register = Boolean.valueOf(req.getParameter("register"));
+        if (register) {
+            req.setAttribute("login_message", "暂不支持个人注册，请联系管理员增加！");
+            req.getRequestDispatcher("login.jsp").forward(req, resp); // 转发错误信息
+        }
+
         // 登录信息
         Staff loginStaff = new StaffServiceImpl().login(username, password);
 
@@ -43,5 +50,7 @@ public class MainServlet extends HttpServlet {
             req.setAttribute("login_message", "用户名或密码错误");
             req.getRequestDispatcher("login.jsp").forward(req, resp); // 转发错误信息
         }
+
+
     }
 }

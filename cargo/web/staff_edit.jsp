@@ -18,6 +18,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/3b6cde5636.js"></script>
     <script src="assets/js/style.js"></script>
+    <script>
+        function confirmDelete(src) {
+            if (confirm("确定要删除吗？")) {
+                location.href = src;
+            }
+        }
+    </script>
 </head>
 <body>
 <%
@@ -70,7 +77,7 @@
             <textarea name="staff_description" id="description" placeholder="请输入描述"></textarea>
             <div class="button-group">
                 <button type="submit">修改</button>
-                <button type="button" onclick="window.location.href='staff?flag=staff_delete&delete_staff_id=<%= staff.getStaffID() %>'">删除</button>
+                <button type="button" onclick="confirmDelete('staff?flag=staff_delete&delete_staff_id=<%= staff.getStaffID() %>')">删除</button>
             </div>
         </form>
     </div>

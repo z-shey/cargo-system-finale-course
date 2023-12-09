@@ -20,4 +20,24 @@ public class DistrictServiceImpl implements DistrictService {
     public District selectDistrict(Integer DistrictID) {
         return districtDao.selectById(DistrictID);
     }
+
+    @Override
+    public Integer selectWarehouseCount() {
+        return districtDao.selectWarehouseNumber();
+    }
+
+    @Override
+    public Integer selectWarehouseCount(Integer DistrictID) {
+        return districtDao.selectWarehouseNumber(DistrictID);
+    }
+
+    @Override
+    public Integer selectStaffCount() {
+        return districtDao.selectStaffNumber();
+    }
+
+    @Override
+    public Integer selectStaffCount(Integer DistrictID) {
+        return districtDao.selectStaffNumber(DistrictID);
+    }
 }

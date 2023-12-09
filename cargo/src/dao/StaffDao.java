@@ -17,4 +17,6 @@ public interface StaffDao {
 
     void delete(Integer StaffID);
 
+    Integer selectStaffNumber(Integer role);
+
 }

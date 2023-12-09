@@ -36,10 +36,11 @@ public class CargoDaoImpl implements CargoDao {
 
     @Override
     public void insert(Cargo cargo) {
-        String sql = "INSERT INTO cargo VALUES(DEFAULT,?,?,?,?)";
+        String sql = "INSERT INTO cargo VALUES(DEFAULT,?,?,?,?,?)";
         try (Connection connection = DBUtil.getConnection()) {
             queryRunner.update(connection, sql,
                     cargo.getCargoName(),
+                    cargo.getCargoPrice(),
                     cargo.getCargoTypeID(),
                     cargo.getWarehouseID(),
                     cargo.getCargoRemark()
@@ -51,13 +52,15 @@ public class CargoDaoImpl implements CargoDao {
 
     @Override
     public void update(Cargo cargo) {
-        String sql = "UPDATE cargo SET CargoName=?, CargoTypeID=?, WarehouseID=?, CargoRemark=? WHERE CargoID=?";
+        String sql = "UPDATE cargo SET CargoName=?, CargoPrice=?, CargoTypeID=?, WarehouseID=?, CargoRemark=? WHERE CargoID=?";
         try (Connection connection = DBUtil.getConnection()) {
             queryRunner.update(connection, sql,
                     cargo.getCargoName(),
+                    cargo.getCargoPrice(),
                     cargo.getCargoTypeID(),
                     cargo.getWarehouseID(),
-                    cargo.getCargoRemark()
+                    cargo.getCargoRemark(),
+                    cargo.getCargoID()
             );
         } catch (SQLException e) {
             throw new RuntimeException(e);

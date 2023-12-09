@@ -38,7 +38,9 @@ public class StaffServlet extends HttpServlet {
 
                 new StaffServiceImpl().insertStaff(staff);
 
-                resp.sendRedirect("/pages/system-page/success.html");
+//                resp.sendRedirect("/pages/system-page/success.html");
+                resp.sendRedirect("workspace.jsp");
+
             }
             case "staff_edit_pre" -> {
                 String staffId = req.getParameter("staff_id"); // 获取
@@ -57,15 +59,18 @@ public class StaffServlet extends HttpServlet {
                 staff.setRoleID(Integer.valueOf(req.getParameter("staff_roleId")));
                 staff.setWarehouseID(Integer.valueOf(req.getParameter("staff_warehouseID")));
                 staff.setDistrictID(Integer.valueOf(req.getParameter("staff_districtID")));
-                staff.setStaffRemark(req.getParameter("description"));
+                staff.setStaffRemark(req.getParameter("staff_description"));
 
                 new StaffServiceImpl().updateStaff(staff);
 
-                resp.sendRedirect("/pages/system-page/success.html");
+//                resp.sendRedirect("/pages/system-page/success.html");
+                resp.sendRedirect("workspace.jsp");
+
             }
             case "staff_delete" -> {
                 new StaffServiceImpl().deleteStaff(Integer.valueOf(req.getParameter("delete_staff_id")));
-                resp.sendRedirect("/pages/system-page/success.html");
+//                resp.sendRedirect("/pages/system-page/success.html");
+                resp.sendRedirect("workspace.jsp");
             }
         }
     }

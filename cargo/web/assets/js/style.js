@@ -21,63 +21,34 @@ function changeContent(id) {
     content.style.display = 'flex'; // 显示当前content元素
 }
 
-function searchUser() {
-    var searchContent = document.getElementById('searchInput').value;
-    var userContainers = document.querySelector('#userManagement').getElementsByClassName('info-container item');
-    var noResultsText = document.getElementById('noResults');
-    var searchCount = document.getElementById('search_count');
 
-    var foundMatch = false;
-    var count = 0;
+// 给每个搜索按钮添加事件监听器
+$(document).ready(function() {
+    $(".search-input").on("input", function() {
+        var searchText = $(this).val().toLowerCase();
+        var contentDivs = $(".content");
 
-    for (var i = 0; i < userContainers.length; i++) {
-        var currentUserContainer = userContainers[i];
-        var userId = currentUserContainer.querySelector('.info-row span').textContent;
+        // 遍历所有的 content div
+        contentDivs.each(function() {
+            var infoContainers = $(this).find(".info-container");
 
-        if (searchContent === '' || userId.includes(searchContent)) {
-            currentUserContainer.style.display = 'flex';
-            foundMatch = true;
-            count++;
-        } else {
-            currentUserContainer.style.display = 'none';
-        }
-    }
+            // 遍历当前 content div 中的 info-container
+            infoContainers.each(function() {
+                var infoText = $(this).text().toLowerCase();
 
-    if (!foundMatch) {
-        noResultsText.style.display = 'flex';
-    } else {
-        noResultsText.style.display = 'none';
-        searchCount.textContent = count;
-    }
-}
+                // 判断搜索文本是否匹配
+                if (infoText.indexOf(searchText) !== -1) {
+                    $(this).show();  // 显示匹配的 info-container
+                } else {
+                    $(this).hide();  // 隐藏不匹配的 info-container
+                }
+            });
+        });
+    });
 
-
-function searchCargo() {
-    var searchContent = document.getElementById('searchInput').value;
-    var userContainers = document.querySelector('#cargoManagement').getElementsByClassName('info-container item');
-    var noResultsText = document.getElementById('noResults');
-    var searchCount = document.getElementById('search_count');
-
-    var foundMatch = false;
-    var count = 0;
-
-    for (var i = 0; i < userContainers.length; i++) {
-        var currentUserContainer = userContainers[i];
-        var userId = currentUserContainer.querySelector('.info-row span').textContent;
-
-        if (searchContent === '' || userId.includes(searchContent)) {
-            currentUserContainer.style.display = 'flex';
-            foundMatch = true;
-            count++;
-        } else {
-            currentUserContainer.style.display = 'none';
-        }
-    }
-
-    if (!foundMatch) {
-        noResultsText.style.display = 'flex';
-    } else {
-        noResultsText.style.display = 'none';
-        searchCount.textContent = count;
-    }
-}
+    // 清空搜索框和显示所有 info-container
+    $(".btn").click(function() {
+        $(".search-input").val("");
+        $(".info-container").show();
+    });
+});
