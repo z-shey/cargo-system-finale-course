@@ -194,7 +194,7 @@
                         <span><%= staff.getStaffRemark() %></span>
                     </div>
                     <div class="button-group">
-                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>
+<%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
                         <button type="button" onclick="location.href='staff?flag=staff_edit_pre&staff_id=<%= staff.getStaffID() %>'">修改信息
                         </button>
                     </div>
@@ -334,7 +334,7 @@
                         <span><%= warehouse.getWarehouseRemark() %></span>
                     </div>
                     <div class="button-group">
-                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>
+<%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
                         <button type="button"
                                 onclick="location.href='warehouse?flag=warehouse_edit_pre&warehouse_id=<%= warehouse.getWarehouseID() %>'">修改信息
                         </button>
@@ -347,6 +347,9 @@
 
 
         </div>
+
+
+
 
         <div class="content" id="districtManagement" style="display: none;">
             <%
