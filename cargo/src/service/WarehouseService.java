@@ -7,11 +7,11 @@ import java.util.List;
 public interface WarehouseService {
     List<Warehouse> selectAllWarehouse();
 
-    Warehouse selectWarehouse(Integer WarehouseID);
+    Warehouse selectById(Integer WarehouseID);
 
-    void updateWarehouse(Warehouse warehouse);
+    void update(Warehouse warehouse);
 
-    void deleteWarehouse(Integer WarehouseID);
+    void delete(Integer WarehouseID);
 
-    void insertWarehouse(Warehouse warehouse);
+    void insert(Warehouse warehouse);
 }

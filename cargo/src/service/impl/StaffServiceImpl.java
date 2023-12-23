@@ -16,22 +16,22 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public Staff selectStaff(Integer StaffID) {
+    public Staff selectById(Integer StaffID) {
         return staffDao.selectById(StaffID);
     }
 
     @Override
-    public void updateStaff(Staff staff) {
+    public void update(Staff staff) {
         staffDao.update(staff);
     }
 
     @Override
-    public void deleteStaff(Integer StaffID) {
+    public void delete(Integer StaffID) {
         staffDao.delete(StaffID);
     }
 
     @Override
-    public void insertStaff(Staff staff) {
+    public void insert(Staff staff) {
         staffDao.insert(staff);
     }
 
@@ -42,6 +42,6 @@ public class StaffServiceImpl implements StaffService {
 
     @Override
     public void register(Staff staff) {
-        insertStaff(staff);
+        insert(staff);
     }
 }

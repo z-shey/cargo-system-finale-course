@@ -55,7 +55,7 @@
                     </p>
                     <span class="span-info"><%=loginStaff.getUsername()%></span>
                     <span class="span-info"><i
-                            class="fa-solid fa-user"></i><%=new RoleServiceImpl().selectRole(loginStaff.getRoleID()).getRoleName()%></span>
+                            class="fa-solid fa-user"></i><%=new RoleServiceImpl().selectById(loginStaff.getRoleID()).getRoleName()%></span>
                 </div>
             </div>
 
@@ -179,15 +179,15 @@
                     </div>
                     <div class="info-row">
                         <label>用户权限</label>
-                        <span><%= new RoleServiceImpl().selectRole(staff.getRoleID()).getRoleName() %></span>
+                        <span><%= new RoleServiceImpl().selectById(staff.getRoleID()).getRoleName() %></span>
                     </div>
                     <div class="info-row">
                         <label>所在仓库</label>
-                        <span><%= new WarehouseServiceImpl().selectWarehouse(staff.getWarehouseID()).getWarehouseName() %></span>
+                        <span><%= new WarehouseServiceImpl().selectById(staff.getWarehouseID()).getWarehouseName() %></span>
                     </div>
                     <div class="info-row">
                         <label>所属片区</label>
-                        <span><%= new DistrictServiceImpl().selectDistrict(staff.getDistrictID()).getDistrictName() %></span>
+                        <span><%= new DistrictServiceImpl().selectById(staff.getDistrictID()).getDistrictName() %></span>
                     </div>
                     <div class="info-row">
                         <label>用户描述</label>
@@ -250,11 +250,11 @@
                     </div>
                     <div class="info-row">
                         <label>货物类型</label>
-                        <span><%= new CargoTypeServiceImpl().selectCargoType(cargo.getCargoTypeID()).getCargoTypeName() %></span>
+                        <span><%= new CargoTypeServiceImpl().selectById(cargo.getCargoTypeID()).getCargoTypeName() %></span>
                     </div>
                     <div class="info-row">
                         <label>所在仓库</label>
-                        <span><%= new WarehouseServiceImpl().selectWarehouse(cargo.getWarehouseID()).getWarehouseName() %></span>
+                        <span><%= new WarehouseServiceImpl().selectById(cargo.getWarehouseID()).getWarehouseName() %></span>
                     </div>
 
                     <div class="info-row">
@@ -319,15 +319,15 @@
                     </div>
                     <div class="info-row">
                         <label>仓库类型</label>
-                        <span><%= new WarehouseTypeServiceImpl().selectWarehouseType(warehouse.getWarehouseType()).getWarehouseTypeName() %></span>
+                        <span><%= new WarehouseTypeServiceImpl().selectById(warehouse.getWarehouseType()).getWarehouseTypeName() %></span>
                     </div>
                     <div class="info-row">
                         <label>所在片区</label>
-                        <span><%= new DistrictServiceImpl().selectDistrict(warehouse.getDistrictID()).getDistrictName() %></span>
+                        <span><%= new DistrictServiceImpl().selectById(warehouse.getDistrictID()).getDistrictName() %></span>
                     </div>
                     <div class="info-row">
                         <label>详细地址</label>
-                        <span><%= new WarehouseServiceImpl().selectWarehouse(warehouse.getWarehouseID()).getWarehouseLocation() %></span>
+                        <span><%= new WarehouseServiceImpl().selectById(warehouse.getWarehouseID()).getWarehouseLocation() %></span>
                     </div>
                     <div class="info-row">
                         <label>仓库描述</label>

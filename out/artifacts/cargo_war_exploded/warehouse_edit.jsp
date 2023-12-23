@@ -41,7 +41,7 @@
             <input type="text" name="warehouse_name" value="<%= warehouse.getWarehouseName() %>" placeholder="仓库名称">
             <input type="text" name="warehouse_location" value="<%= warehouse.getWarehouseLocation() %>" placeholder="仓库地址">
             <select name="warehouse_type">
-                <option value="<%= warehouse.getWarehouseType() %>"><%= new WarehouseTypeServiceImpl().selectWarehouseType(warehouse.getWarehouseType()).getWarehouseTypeName() %>
+                <option value="<%= warehouse.getWarehouseType() %>"><%= new WarehouseTypeServiceImpl().selectById(warehouse.getWarehouseType()).getWarehouseTypeName() %>
                 </option>
                 <% for (WarehouseType warehouseType : warehouseTypeList) {
                     if (warehouseType.getWarehouseTypeID() != warehouse.getWarehouseType()) {%>
@@ -51,7 +51,7 @@
                 } %>
             </select>
             <select name="warehouse_districtID">
-                <option value="<%= warehouse.getDistrictID() %>"><%= new DistrictServiceImpl().selectDistrict(warehouse.getDistrictID()).getDistrictName() %>
+                <option value="<%= warehouse.getDistrictID() %>"><%= new DistrictServiceImpl().selectById(warehouse.getDistrictID()).getDistrictName() %>
                 </option>
                 <% for (District district : districtList) {
                     if (district.getDistrictID() != warehouse.getDistrictID()) {%>

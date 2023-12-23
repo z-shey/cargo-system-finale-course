@@ -36,7 +36,7 @@
             <input type="text" name="cargo_name" value="<%= cargo.getCargoName() %>" placeholder="货物名称">
             <input type="number" name="cargo_price" value="<%= cargo.getCargoPrice() %>" placeholder="货物价格">
             <select name="cargo_type">
-                <option value="<%= cargo.getCargoTypeID() %>"><%= new CargoTypeServiceImpl().selectCargoType(cargo.getCargoTypeID()).getCargoTypeName() %>
+                <option value="<%= cargo.getCargoTypeID() %>"><%= new CargoTypeServiceImpl().selectById(cargo.getCargoTypeID()).getCargoTypeName() %>
                 </option>
                 <% for (CargoType cargoType : cargoTypeList) {
                     if (cargoType.getCargoTypeID() != cargo.getCargoTypeID()) {%>
@@ -46,7 +46,7 @@
                 } %>
             </select>
             <select name="cargo_warehouseID">
-                <option value="<%= cargo.getWarehouseID() %>"><%= new WarehouseServiceImpl().selectWarehouse(cargo.getWarehouseID()).getWarehouseName() %>
+                <option value="<%= cargo.getWarehouseID() %>"><%= new WarehouseServiceImpl().selectById(cargo.getWarehouseID()).getWarehouseName() %>
                 </option>
                 <% for (Warehouse warehouse : warehouseList) {
                     if (warehouse.getWarehouseID() != cargo.getWarehouseID()) {%>

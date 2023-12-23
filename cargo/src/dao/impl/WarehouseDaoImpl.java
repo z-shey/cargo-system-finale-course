@@ -25,7 +25,7 @@ public class WarehouseDaoImpl implements WarehouseDao {
     }
 
     @Override
-    public Warehouse selectWarehouseById(Integer WarehouseID) {
+    public Warehouse selectById(Integer WarehouseID) {
         String sql = "SELECT * FROM warehouse WHERE WarehouseID=?";
         try (Connection connection = DBUtil.getConnection()) {
             return queryRunner.query(connection, sql, new BeanHandler<>(Warehouse.class), WarehouseID);

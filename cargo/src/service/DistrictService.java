@@ -7,7 +7,7 @@ import java.util.List;
 public interface DistrictService {
     List<District> selectAllDistrict();
 
-    District selectDistrict(Integer DistrictID);
+    District selectById(Integer DistrictID);
 
     Integer selectWarehouseCount();
 

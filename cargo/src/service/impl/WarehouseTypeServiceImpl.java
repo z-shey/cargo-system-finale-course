@@ -17,7 +17,7 @@ public class WarehouseTypeServiceImpl implements WarehouseTypeService {
     }
 
     @Override
-    public WarehouseType selectWarehouseType(Integer WarehouseTypeID) {
+    public WarehouseType selectById(Integer WarehouseTypeID) {
         return warehouseTypeDao.selectById(WarehouseTypeID);
     }
 }

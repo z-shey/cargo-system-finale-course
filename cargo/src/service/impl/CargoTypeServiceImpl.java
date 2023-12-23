@@ -17,7 +17,7 @@ public class CargoTypeServiceImpl implements CargoTypeService {
     }
 
     @Override
-    public CargoType selectCargoType(Integer CargoTypeID) {
+    public CargoType selectById(Integer CargoTypeID) {
         return cargoTypeDao.selectById(CargoTypeID);
     }
 }

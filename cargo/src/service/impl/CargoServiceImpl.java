@@ -17,22 +17,22 @@ public class CargoServiceImpl implements CargoService {
     }
 
     @Override
-    public Cargo selectCargo(Integer CargoID) {
+    public Cargo selectById(Integer CargoID) {
         return cargoDao.selectById(CargoID);
     }
 
     @Override
-    public void updateCargo(Cargo cargo) {
+    public void update(Cargo cargo) {
         cargoDao.update(cargo);
     }
 
     @Override
-    public void deleteCargo(Integer CargoID) {
+    public void delete(Integer CargoID) {
         cargoDao.delete(CargoID);
     }
 
     @Override
-    public void insertCargo(Cargo cargo) {
+    public void insert(Cargo cargo) {
         cargoDao.insert(cargo);
     }
 }

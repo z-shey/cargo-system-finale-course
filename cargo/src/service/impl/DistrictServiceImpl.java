@@ -17,7 +17,7 @@ public class DistrictServiceImpl implements DistrictService {
     }
 
     @Override
-    public District selectDistrict(Integer DistrictID) {
+    public District selectById(Integer DistrictID) {
         return districtDao.selectById(DistrictID);
     }
 

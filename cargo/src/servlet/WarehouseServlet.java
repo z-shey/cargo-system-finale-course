@@ -1,15 +1,12 @@
 package servlet;
 
 
-import entity.Cargo;
 import entity.Warehouse;
-import entity.WarehouseType;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import service.impl.CargoServiceImpl;
 import service.impl.WarehouseServiceImpl;
 
 import java.io.IOException;
@@ -36,13 +33,13 @@ public class WarehouseServlet extends HttpServlet {
                 warehouse.setWarehouseType(Integer.valueOf(req.getParameter("warehouse_type")));
                 warehouse.setDistrictID(Integer.valueOf(req.getParameter("warehouse_districtID")));
 
-                new WarehouseServiceImpl().insertWarehouse(warehouse);
+                new WarehouseServiceImpl().insert(warehouse);
 
                 resp.sendRedirect("workspace.jsp");
             }
             case "warehouse_edit_pre" -> {
                 String warehouseId = req.getParameter("warehouse_id"); // 获取
-                Warehouse warehouse = new WarehouseServiceImpl().selectWarehouse(Integer.valueOf(warehouseId));
+                Warehouse warehouse = new WarehouseServiceImpl().selectById(Integer.valueOf(warehouseId));
 //
                 req.setAttribute("old_warehouse", warehouse);
                 req.getRequestDispatcher("warehouse_edit.jsp").forward(req, resp);
@@ -57,12 +54,12 @@ public class WarehouseServlet extends HttpServlet {
                 warehouse.setDistrictID(Integer.valueOf(req.getParameter("warehouse_districtID")));
                 warehouse.setWarehouseRemark(req.getParameter("warehouse_description"));
 
-                new WarehouseServiceImpl().updateWarehouse(warehouse);
+                new WarehouseServiceImpl().update(warehouse);
 
                 resp.sendRedirect("workspace.jsp");
             }
             case "warehouse_delete" -> {
-                new WarehouseServiceImpl().deleteWarehouse(Integer.valueOf(req.getParameter("delete_warehouse_id")));
+                new WarehouseServiceImpl().delete(Integer.valueOf(req.getParameter("delete_warehouse_id")));
                 resp.sendRedirect("workspace.jsp");
             }
         }

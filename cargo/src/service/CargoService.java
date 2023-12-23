@@ -7,11 +7,11 @@ import java.util.List;
 public interface CargoService {
     List<Cargo> selectAllCargo();
 
-    Cargo selectCargo(Integer CargoID);
+    Cargo selectById(Integer CargoID);
 
-    void updateCargo(Cargo cargo);
+    void update(Cargo cargo);
 
-    void deleteCargo(Integer CargoID);
+    void delete(Integer CargoID);
 
-    void insertCargo(Cargo cargo);
+    void insert(Cargo cargo);
 }

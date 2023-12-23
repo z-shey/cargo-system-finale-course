@@ -45,7 +45,7 @@
             <input type="text" name="staff_username" value="<%= staff.getUsername() %>" placeholder="用户名">
             <input type="password" name="staff_password" value="<%= staff.getPassword() %>" placeholder="密码">
             <select name="staff_roleId">
-                <option value="<%= staff.getRoleID() %>"><%= new RoleServiceImpl().selectRole(staff.getRoleID()).getRoleName() %>
+                <option value="<%= staff.getRoleID() %>"><%= new RoleServiceImpl().selectById(staff.getRoleID()).getRoleName() %>
                 </option>
                 <% for (Role role : roleList) {
                     if (role.getRoleID() != staff.getRoleID()) {%>
@@ -55,7 +55,7 @@
                 } %>
             </select>
             <select name="staff_warehouseID">
-                <option value="<%= staff.getWarehouseID() %>"><%= new WarehouseServiceImpl().selectWarehouse(staff.getWarehouseID()).getWarehouseName() %>
+                <option value="<%= staff.getWarehouseID() %>"><%= new WarehouseServiceImpl().selectById(staff.getWarehouseID()).getWarehouseName() %>
                 </option>
                 <% for (Warehouse warehouse : warehouseList) {
                     if (warehouse.getWarehouseID() != staff.getWarehouseID()) {%>
@@ -65,7 +65,7 @@
                 } %>
             </select>
             <select name="staff_districtID">
-                <option value="<%= staff.getDistrictID() %>"><%= new DistrictServiceImpl().selectDistrict(staff.getDistrictID()).getDistrictName() %>
+                <option value="<%= staff.getDistrictID() %>"><%= new DistrictServiceImpl().selectById(staff.getDistrictID()).getDistrictName() %>
                 </option>
                 <% for (District district : districtList) {
                     if (district.getDistrictID() != staff.getDistrictID()) { %>

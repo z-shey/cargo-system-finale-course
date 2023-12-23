@@ -2,14 +2,12 @@ package servlet;
 
 
 import entity.Cargo;
-import entity.Staff;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import service.impl.CargoServiceImpl;
-import service.impl.StaffServiceImpl;
 
 import java.io.IOException;
 
@@ -36,13 +34,13 @@ public class CargoServlet extends HttpServlet {
                 cargo.setWarehouseID(Integer.valueOf(req.getParameter("cargo_warehouseID")));
                 cargo.setCargoRemark(req.getParameter("cargo_description"));
 
-                new CargoServiceImpl().insertCargo(cargo);
+                new CargoServiceImpl().insert(cargo);
 
                 resp.sendRedirect("workspace.jsp");
             }
             case "cargo_edit_pre" -> {
                 String cargoId = req.getParameter("cargo_id"); // 获取
-                Cargo cargo = new CargoServiceImpl().selectCargo(Integer.valueOf(cargoId));
+                Cargo cargo = new CargoServiceImpl().selectById(Integer.valueOf(cargoId));
 
                 req.setAttribute("old_cargo", cargo);
                 req.getRequestDispatcher("cargo_edit.jsp").forward(req, resp);
@@ -57,12 +55,12 @@ public class CargoServlet extends HttpServlet {
                 cargo.setWarehouseID(Integer.valueOf(req.getParameter("cargo_warehouseID")));
                 cargo.setCargoRemark(req.getParameter("cargo_description"));
 
-                new CargoServiceImpl().updateCargo(cargo);
+                new CargoServiceImpl().update(cargo);
 
                 resp.sendRedirect("workspace.jsp");
             }
             case "cargo_delete" -> {
-                new CargoServiceImpl().deleteCargo(Integer.valueOf(req.getParameter("delete_cargo_id")));
+                new CargoServiceImpl().delete(Integer.valueOf(req.getParameter("delete_cargo_id")));
                 resp.sendRedirect("workspace.jsp");
             }
         }

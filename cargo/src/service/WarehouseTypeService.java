@@ -7,5 +7,5 @@ import java.util.List;
 public interface WarehouseTypeService {
     List<WarehouseType> selectAllWarehouseType();
 
-    WarehouseType selectWarehouseType(Integer WarehouseTypeID);
+    WarehouseType selectById(Integer WarehouseTypeID);
 }

@@ -7,5 +7,5 @@ import java.util.List;
 public interface CargoTypeService {
     List<CargoType> selectAllCargoType();
 
-    CargoType selectCargoType(Integer CargoTypeID);
+    CargoType selectById(Integer CargoTypeID);
 }

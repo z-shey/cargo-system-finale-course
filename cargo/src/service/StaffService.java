@@ -7,13 +7,13 @@ import java.util.List;
 public interface StaffService {
     List<Staff> selectAllStaff();
 
-    Staff selectStaff(Integer StaffID);
+    Staff selectById(Integer StaffID);
 
-    void updateStaff(Staff staff);
+    void update(Staff staff);
 
-    void deleteStaff(Integer StaffID);
+    void delete(Integer StaffID);
 
-    void insertStaff(Staff staff);
+    void insert(Staff staff);
 
     Staff login(String Username, String Password);
 

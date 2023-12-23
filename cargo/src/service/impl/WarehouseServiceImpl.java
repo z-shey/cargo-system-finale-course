@@ -17,22 +17,22 @@ public class WarehouseServiceImpl implements WarehouseService {
     }
 
     @Override
-    public Warehouse selectWarehouse(Integer WarehouseID) {
-        return warehouseDao.selectWarehouseById(WarehouseID);
+    public Warehouse selectById(Integer WarehouseID) {
+        return warehouseDao.selectById(WarehouseID);
     }
 
     @Override
-    public void updateWarehouse(Warehouse warehouse) {
+    public void update(Warehouse warehouse) {
         warehouseDao.update(warehouse);
     }
 
     @Override
-    public void deleteWarehouse(Integer WarehouseID) {
+    public void delete(Integer WarehouseID) {
         warehouseDao.delete(WarehouseID);
     }
 
     @Override
-    public void insertWarehouse(Warehouse warehouse) {
+    public void insert(Warehouse warehouse) {
         warehouseDao.insert(warehouse);
     }
 }
