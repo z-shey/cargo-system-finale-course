@@ -5,6 +5,9 @@ import entity.Warehouse;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+import org.junit.Before;
+import org.junit.Test;
 import util.DBUtil;
 
 import java.sql.Connection;
@@ -74,6 +77,16 @@ public class WarehouseDaoImpl implements WarehouseDao {
         String sql = "DELETE FROM warehouse WHERE WarehouseID=?";
         try (Connection connection = DBUtil.getConnection()) {
             queryRunner.update(connection, sql, WarehouseID);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Long countCargo(Integer WarehouseID) {
+        String sql = "SELECT * FROM cargo WHERE WarehouseID = ?";
+        try (Connection connection = DBUtil.getConnection()) {
+            return queryRunner.query(connection, sql, new ScalarHandler<Long>(), WarehouseID);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

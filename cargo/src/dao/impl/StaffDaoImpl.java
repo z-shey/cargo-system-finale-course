@@ -1,7 +1,6 @@
 package dao.impl;
 
 import dao.StaffDao;
-import entity.RoleEnum;
 import entity.Staff;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;

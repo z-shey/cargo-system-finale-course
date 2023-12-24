@@ -48,7 +48,8 @@
             </div>
             <div class="profile_info">
                 <div class="profile_img">
-                    <img src="http://q.qlogo.cn/headimg_dl?dst_uin=3317229064&spec=640&img_type=jpg" alt="">
+                    <img src="https://img.zcool.cn/community/01cfd95d145660a8012051cdb52093.png@1280w_1l_2o_100sh.png"
+                         alt="">
                 </div>
                 <div class="profile_data">
                     <p class="name"><%=loginStaff.getStaffName()%>
@@ -63,11 +64,14 @@
                 <li class="active">
                     <a onclick="changeContent('workArea')">
                         <div class="icon"><i class="fa-solid fa-table-columns"></i></div>
-                        <div class="title">工作区</div>
+                        <div class="title">首页</div>
                     </a>
                 </li>
 
-                <% if (role_id == 1 || role_id == 2 || role_id == 3 || role_id == 4) {%>
+                <% if (role_id == RoleEnum.NATIONAL_ADMIN
+                        || role_id == RoleEnum.DISTRICT_ADMIN
+                        || role_id == RoleEnum.WAREHOUSE_ADMIN
+                        || role_id == RoleEnum.STAFF_ADMIN) {%>
                 <li>
                     <a onclick="changeContent('userManagement')">
                         <div class="icon"><i class="fa-solid fa-users"></i></div>
@@ -76,7 +80,11 @@
                 </li>
                 <%}%>
 
-                <% if (role_id == 1 || role_id == 2 || role_id == 3 || role_id == 4 || role_id == 5) {%>
+                <% if (role_id == RoleEnum.NATIONAL_ADMIN
+                        || role_id == RoleEnum.DISTRICT_ADMIN
+                        || role_id == RoleEnum.WAREHOUSE_ADMIN
+                        || role_id == RoleEnum.STAFF_ADMIN
+                        || role_id == RoleEnum.REGULAR_STAFF) {%>
                 <li>
                     <a onclick="changeContent('cargoManagement')">
                         <div class="icon"><i class="fa-solid fa-box-open"></i></div>
@@ -84,7 +92,9 @@
                     </a>
                 </li>
                 <%}%>
-                <% if (role_id == 1 || role_id == 2 || role_id == 3) {%>
+                <% if (role_id == RoleEnum.NATIONAL_ADMIN
+                        || role_id == RoleEnum.DISTRICT_ADMIN
+                        || role_id == RoleEnum.WAREHOUSE_ADMIN) {%>
                 <li>
                     <a onclick="changeContent('warehouseManagement')">
                         <div class="icon"><i class="fa-solid fa-house-flag"></i></div>
@@ -93,7 +103,7 @@
                 </li>
                 <%}%>
 
-                <% if (role_id == 1) {%>
+                <% if (role_id == RoleEnum.NATIONAL_ADMIN) {%>
                 <li>
                     <a onclick="changeContent('districtManagement')">
                         <div class="icon"><i class="fa-solid fa-map"></i></div>
@@ -126,7 +136,7 @@
             <div class="info-container item">
                 <div class="info-content">
                     <h2>你好</h2>
-                    欢迎回来，暂无消息
+                    欢迎回来
                 </div>
             </div>
         </div>
@@ -161,7 +171,9 @@
             </div>
 
             <% for (Staff staff : staffList) {
-                if (staff.getRoleID() > loginStaff.getRoleID() || role_id == 1 || staff.getWarehouseID() == loginStaff.getWarehouseID()) {
+                if (staff.getRoleID() > loginStaff.getRoleID()
+                        || role_id == RoleEnum.NATIONAL_ADMIN
+                        || staff.getWarehouseID() == loginStaff.getWarehouseID()) {
             %>
 
             <div class="info-container item">
@@ -194,8 +206,10 @@
                         <span><%= staff.getStaffRemark() %></span>
                     </div>
                     <div class="button-group">
-<%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
-                        <button type="button" onclick="location.href='staff?flag=staff_edit_pre&staff_id=<%= staff.getStaffID() %>'">修改信息
+                        <%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
+                        <button type="button"
+                                onclick="location.href='staff?flag=staff_edit_pre&staff_id=<%= staff.getStaffID() %>'">
+                            修改信息
                         </button>
                     </div>
                 </div>
@@ -233,7 +247,8 @@
             </div>
 
             <% for (Cargo cargo : cargoList) {
-                if (cargo.getWarehouseID() == loginStaff.getWarehouseID() || role_id == 1) {
+                if (cargo.getWarehouseID() == loginStaff.getWarehouseID()
+                        || role_id == RoleEnum.NATIONAL_ADMIN) {
             %>
             <div class="info-container item">
                 <div class="info-content">
@@ -262,9 +277,12 @@
                         <span><%= cargo.getCargoRemark() %></span>
                     </div>
                     <div class="button-group">
-                        <button type="button" onclick="location.href='cargo?flag=cargo_edit_pre&cargo_id=<%= cargo.getCargoID() %>'">修改信息
+                        <button type="button"
+                                onclick="location.href='cargo?flag=cargo_edit_pre&cargo_id=<%= cargo.getCargoID() %>'">
+                            修改信息
                         </button>
-                        <button type="button" onclick="confirmDelete('cargo?flag=cargo_delete&delete_cargo_id=<%= cargo.getCargoID() %>')">
+                        <button type="button"
+                                onclick="confirmDelete('cargo?flag=cargo_delete&delete_cargo_id=<%= cargo.getCargoID() %>')">
                             出库
                         </button>
                     </div>
@@ -292,7 +310,7 @@
                             <label>数量</label>
                             <span>(<%= warehouse_count %>)</span>
                         </div>
-                        <% if (role_id == 1 || role_id == 2 || role_id == 3) { %>
+                        <% if (role_id == RoleEnum.NATIONAL_ADMIN || role_id == RoleEnum.DISTRICT_ADMIN || role_id == RoleEnum.WAREHOUSE_ADMIN) { %>
                         <a type="button" class="btn add" href='warehouse_add.jsp'>新增</a>
                         <% } %>
                     </div>
@@ -305,7 +323,7 @@
             </div>
 
             <% for (Warehouse warehouse : warehouseList) {
-                if (warehouse.getDistrictID() == loginStaff.getDistrictID() || role_id == 1) {
+                if (warehouse.getDistrictID() == loginStaff.getDistrictID() || role_id == RoleEnum.NATIONAL_ADMIN) {
             %>
 
             <div class="info-container item">
@@ -316,6 +334,10 @@
                     <div class="info-row">
                         <label>仓库ID</label>
                         <span><%= warehouse.getWarehouseID() %></span>
+                    </div>
+                    <div class="info-row">
+                        <label>库存数</label>
+                        <span><%= new WarehouseServiceImpl().getCargoCount(warehouse.getWarehouseID()) %></span>
                     </div>
                     <div class="info-row">
                         <label>仓库类型</label>
@@ -334,9 +356,10 @@
                         <span><%= warehouse.getWarehouseRemark() %></span>
                     </div>
                     <div class="button-group">
-<%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
+                        <%--                        <button type="button" onclick="location.href='pages/system-page/500.html'">查看详情</button>--%>
                         <button type="button"
-                                onclick="location.href='warehouse?flag=warehouse_edit_pre&warehouse_id=<%= warehouse.getWarehouseID() %>'">修改信息
+                                onclick="location.href='warehouse?flag=warehouse_edit_pre&warehouse_id=<%= warehouse.getWarehouseID() %>'">
+                            修改信息
                         </button>
                     </div>
                 </div>
@@ -347,8 +370,6 @@
 
 
         </div>
-
-
 
 
         <div class="content" id="districtManagement" style="display: none;">

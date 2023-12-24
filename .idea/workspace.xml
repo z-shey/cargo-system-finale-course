@@ -11,71 +11,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4a009f12-8519-4cb2-acc1-6642ce90dc12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cargo/cargo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/cargo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cargo/src/dao/WarehouseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/dao/WarehouseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cargo/src/dao/impl/StaffDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/dao/impl/StaffDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cargo/src/dao/impl/WarehouseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/dao/impl/WarehouseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/CargoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/CargoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/CargoTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/CargoTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/DistrictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/DistrictService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/StaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/WarehouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/WarehouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/WarehouseTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/WarehouseTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/CargoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/CargoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/CargoTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/CargoTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/DistrictServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/DistrictServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cargo/src/entity/RoleEnum.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/WarehouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/WarehouseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/service/impl/WarehouseTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/service/impl/WarehouseTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/servlet/CargoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/servlet/CargoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/servlet/StaffServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/servlet/StaffServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/src/servlet/WarehouseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/src/servlet/WarehouseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/web/cargo_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/web/cargo_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/web/staff_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/web/staff_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cargo/web/warehouse_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/web/warehouse_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cargo/web/workspace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cargo/web/workspace.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/dao/WarehouseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/dao/WarehouseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/dao/impl/WarehouseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/dao/impl/WarehouseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/CargoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/CargoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/CargoTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/CargoTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/DistrictService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/DistrictService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/StaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/StaffService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/WarehouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/WarehouseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/WarehouseTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/WarehouseTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/CargoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/CargoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/CargoTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/CargoTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/DistrictServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/DistrictServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/StaffServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/WarehouseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/WarehouseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/WarehouseTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/service/impl/WarehouseTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/CargoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/CargoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/StaffServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/StaffServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/WarehouseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/WEB-INF/classes/servlet/WarehouseServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/cargo_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/cargo_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/staff_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/staff_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/warehouse_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/warehouse_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/workspace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cargo_war_exploded/workspace.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/dao/WarehouseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/dao/WarehouseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/dao/impl/WarehouseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/dao/impl/WarehouseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/CargoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/CargoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/CargoTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/CargoTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/DistrictService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/DistrictService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/StaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/StaffService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/WarehouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/WarehouseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/WarehouseTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/WarehouseTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/CargoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/CargoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/CargoTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/CargoTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/DistrictServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/DistrictServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/StaffServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/WarehouseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/WarehouseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/service/impl/WarehouseTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/service/impl/WarehouseTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/servlet/CargoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/servlet/CargoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/servlet/StaffServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/servlet/StaffServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cargo/servlet/WarehouseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cargo/servlet/WarehouseServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,10 +28,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
-        <option value="Enum" />
         <option value="HTML File" />
         <option value="Jsp File" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,33 +60,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.16.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code Space/Ordinary Repository/cargo-system-finale-course&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.WarehouseDaoImplTest.testCount.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.16.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Code Space/Ordinary Repository/cargo-system-finale-course",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code Space\Ordinary Repository\cargo-system-finale-course\cargo\web" />
@@ -163,7 +111,17 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.16">
+    <configuration name="WarehouseDaoImplTest.testCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cargo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WarehouseDaoImplTest" />
+      <option name="METHOD_NAME" value="testCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.16" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -251,6 +209,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WarehouseDaoImplTest.testCount" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -288,6 +251,8 @@
       <workItem from="1703155262345" duration="5478000" />
       <workItem from="1703166126109" duration="145000" />
       <workItem from="1703255241264" duration="760000" />
+      <workItem from="1703383273634" duration="378000" />
+      <workItem from="1703383660811" duration="2383000" />
     </task>
     <servers />
   </component>

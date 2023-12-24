@@ -3,6 +3,7 @@ package service.impl;
 
 import dao.WarehouseDao;
 import dao.impl.WarehouseDaoImpl;
+import entity.Cargo;
 import entity.Warehouse;
 import service.WarehouseService;
 
@@ -34,5 +35,16 @@ public class WarehouseServiceImpl implements WarehouseService {
     @Override
     public void insert(Warehouse warehouse) {
         warehouseDao.insert(warehouse);
+    }
+
+    public Integer getCargoCount(Integer WarehouseId) {
+        int count = 0;
+        for (Cargo cargo : new CargoServiceImpl().selectAllCargo()) {
+            if (cargo.getWarehouseID() == WarehouseId) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }

@@ -1,18 +1,9 @@
 package entity;
 
-public enum RoleEnum {
-    ADMIN(1),
-    USER(2),
-    GUEST(3);
-
-    private final Integer value;
-
-    RoleEnum(Integer value) {
-        this.value = value;
-    }
-
-    public Integer getValue() {
-        return value;
-    }
+public interface RoleEnum {
+    Integer NATIONAL_ADMIN = 1;
+    Integer DISTRICT_ADMIN = 2;
+    Integer WAREHOUSE_ADMIN = 3;
+    Integer STAFF_ADMIN = 4;
+    Integer REGULAR_STAFF = 5;
 }
-
